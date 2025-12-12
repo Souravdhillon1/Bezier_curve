@@ -1,16 +1,24 @@
-# React + Vite
+# Interactive Bézier Rope - React + Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React** project that simulates an interactive **cubic Bézier curve** behaving like a springy rope.  
+Drag the control points to see the rope bend naturally, with **physics-based motion** and **tangent visualization**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Features
 
-## React Compiler
+- **Cubic Bézier Curve** with 4 control points (P0, P1, P2, P3)  
+- **Dynamic control points (P1 & P2)** with spring-damping physics  
+- **Tangent visualization** along the curve  
+- **Interactive dragging** of points with smooth motion  
+- Built with **React**, **Tailwind CSS**, and **HTML Canvas**  
+- Fully manual Bézier math and physics (no external libraries)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Installation & Running
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Souravdhillon1/Bezier_curve.git

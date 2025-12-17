@@ -1,6 +1,11 @@
 # Bézier Rope Simulation
 
-This is a small interactive project that simulates a rope using a cubic Bézier curve.
+🎥 **Working Demo Video:**  
+https://drive.google.com/file/d/1hMBetWH65r_A7hOfhaxiwnXtQ1kv7DGD/view?usp=drivesdk
+
+---
+
+This is a small interactive project that simulates a rope using a cubic Bézier curve.  
 The curve reacts smoothly to mouse movement using a simple spring and damping model.
 
 The goal of this project is to understand Bézier math, basic physics, and real-time
@@ -72,10 +77,10 @@ bezier-rope/
 
 ## How to Run
 
-Option 1:
+**Option 1:**
 - Open `index.html` directly in a browser
 
-Option 2 (recommended):
+**Option 2 (recommended):**
 - Open the folder in VS Code
 - Use the Live Server extension
 - Right-click `index.html` → Open with Live Server

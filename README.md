@@ -1,24 +1,95 @@
-# Interactive Bézier Rope - React + Tailwind
+# Bézier Rope Simulation
 
-A **React** project that simulates an interactive **cubic Bézier curve** behaving like a springy rope.  
-Drag the control points to see the rope bend naturally, with **physics-based motion** and **tangent visualization**.
+This is a small interactive project that simulates a rope using a cubic Bézier curve.
+The curve reacts smoothly to mouse movement using a simple spring and damping model.
 
----
-
-## 🎯 Features
-
-- **Cubic Bézier Curve** with 4 control points (P0, P1, P2, P3)  
-- **Dynamic control points (P1 & P2)** with spring-damping physics  
-- **Tangent visualization** along the curve  
-- **Interactive dragging** of points with smooth motion  
-- Built with **React**, **Tailwind CSS**, and **HTML Canvas**  
-- Fully manual Bézier math and physics (no external libraries)
+The goal of this project is to understand Bézier math, basic physics, and real-time
+rendering using plain HTML Canvas and JavaScript.
 
 ---
 
-## 🛠️ Installation & Running
+## Features
 
-1. Clone the repository:
+- Cubic Bézier curve drawn manually
+- Fixed endpoints with dynamic middle control points
+- Spring-damping physics for smooth motion
+- Tangent vectors visualized along the curve
+- Real-time interaction (~60 FPS)
+- No external libraries or frameworks
 
-```bash
-git clone https://github.com/Souravdhillon1/Bezier_curve.git
+---
+
+## Bézier Math
+
+The rope is represented using a cubic Bézier curve with four control points:
+
+B(t) = (1 − t)³P0  
+     + 3(1 − t)²tP1  
+     + 3(1 − t)t²P2  
+     + t³P3
+
+---
+
+## Tangents
+
+Tangents are computed using the analytical derivative of the Bézier curve:
+
+B′(t) = 3(1 − t)²(P1 − P0)  
+      + 6(1 − t)t(P2 − P1)  
+      + 3t²(P3 − P2)
+
+The tangent vectors are normalized and scaled only for visualization.
+
+---
+
+## Physics Model
+
+The middle control points follow a spring-damping system:
+
+force = −k × (position − target)  
+velocity = (velocity + force) × damping  
+position = position + velocity
+
+This creates a rope-like motion instead of instant snapping.
+
+---
+
+## Controls
+
+- Move the mouse to influence the rope
+- The curve responds smoothly with inertia
+
+---
+
+## Project Structure
+
+bezier-rope/  
+├── index.html  
+├── script.js  
+└── README.md  
+
+---
+
+## How to Run
+
+Option 1:
+- Open `index.html` directly in a browser
+
+Option 2 (recommended):
+- Open the folder in VS Code
+- Use the Live Server extension
+- Right-click `index.html` → Open with Live Server
+
+---
+
+## Notes
+
+- All math and physics are implemented manually
+- No animation or physics libraries are used
+- Canvas is used directly for rendering
+
+---
+
+## License
+
+Free to use for learning and experimentation.
